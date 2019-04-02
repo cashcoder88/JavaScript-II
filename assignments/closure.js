@@ -1,6 +1,19 @@
 // ==== Challenge 1: Write your own closure ====
 // Write a simple closure of your own creation.  Keep it simple!
 
+function kingKong() {
+    const kingKongChestBeat = "~~~POW, SLAM, POW~~~";
+    const scream = "OMG, LOOK OUT IT'S KING KONG";
+
+    function villagers() {
+        const personScreamingBecauseKingKong = ` ${kingKongChestBeat} ${scream}!!!!!!`;
+        console.log(personScreamingBecauseKingKong);
+    } 
+  villagers();  
+}
+
+kingKong();
+
 
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
 
