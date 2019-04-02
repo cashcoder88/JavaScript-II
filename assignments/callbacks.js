@@ -76,11 +76,11 @@ console.log(sumNums(5, 10, sumCb));
 
 function multiplyNums(x, y, cb) {
   // multiplyNums multiplies two numbers and passes the result to the callback.
-    return cb(x * y);
+    return cb(x, y);
 }
 
 let multiplyCb = function(num1, num2) {
-    console.log(num1, num2);
+    return num1 * num2;
 };
 
 console.log(multiplyNums(6, 5, multiplyCb));
@@ -92,11 +92,12 @@ console.log(multiplyNums(6, 5, multiplyCb));
 function contains(item, list, cb) {
   // contains checks if an item is present inside of the given array/list.
   // Pass true to the callback if it is, otherwise pass false.
-    if(list.includes(item)){
-        return cb(true);
-    } else {
-        return cb(false);
-    }
+//    if(list.includes(item)){
+//        return cb(true);
+//    } else {
+//        return cb(false);
+//    }
+    return list.includes(item);
 }
 
 let containsCb = function(doesOrDoesNotContain) {
@@ -105,7 +106,8 @@ let containsCb = function(doesOrDoesNotContain) {
 
 console.log(contains('Pencil', items, containsCb));
 console.log(contains('Cup', items, containsCb));
-
+console.log(contains('yo-yo', items, containsCb));
+console.log(contains('pig', items, containsCb));
 
 // -----------------------------------------------------
 ///* STRETCH PROBLEM */
