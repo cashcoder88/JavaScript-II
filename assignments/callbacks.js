@@ -61,11 +61,11 @@ console.log(last(items, lastItemCb));
 // -----------------------------------------------------
 function sumNums(x, y, cb) {
   // sumNums adds two numbers (x, y) and passes the result to the callback.
-    return cb(x + y);
+    return cb(x, y);
 }
 
 let sumCb = function(num1, num2) {
-    console.log(num1, num2);
+    return (num1 + num2);
 };
 
 console.log(sumNums(5, 10, sumCb));
